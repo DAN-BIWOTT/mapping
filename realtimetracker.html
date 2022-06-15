@@ -54,7 +54,10 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo (map_init);
         // Listen to slider change
-       
+        var zoomVal;
+        function adjustZoom(params) {
+            map_init.setZoom(params)
+        }
         //Geocoding is the process of converting addresses like “1600 Amphitheatre Parkway into geographic coordinates latitude 37.423021 and longitude -122.083739
         //but here we are doing Reverse Geocoding
         L.Control.geocoder().addTo(map_init);
